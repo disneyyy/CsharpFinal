@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        int time = 0;
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +45,8 @@ namespace WindowsFormsApp1
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-
+            time = int.Parse(comboBox1.Text) * 60;
+            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
