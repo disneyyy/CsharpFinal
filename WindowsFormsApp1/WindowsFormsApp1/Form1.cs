@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         int time = 0;
+        CalcForm calc;
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +36,8 @@ namespace WindowsFormsApp1
 
         private void buttonCalculator_Click(object sender, EventArgs e)
         {
-
+            calc = new CalcForm();
+            calc.Show();
         }
 
         private void buttonNote_Click(object sender, EventArgs e)
