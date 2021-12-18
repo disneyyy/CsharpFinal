@@ -13,8 +13,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         int time = 0;
-        bool study = false;
-        //int 
+        
         public Form1()
         {
             InitializeComponent();
