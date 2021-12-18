@@ -36,6 +36,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonGame
@@ -92,6 +93,7 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "60";
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // buttonStart
             // 
@@ -108,11 +110,22 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("新細明體", 20F);
+            this.labelTime.Location = new System.Drawing.Point(645, 359);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(129, 34);
+            this.labelTime.TabIndex = 3;
+            this.labelTime.Text = "01:00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelTime);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonNote);
@@ -123,6 +136,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -135,6 +149,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelTime;
     }
 }
 
