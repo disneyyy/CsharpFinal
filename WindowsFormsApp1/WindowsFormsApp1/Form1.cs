@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     {
         int time = 0;
         bool study = false;
+        int distracted = 0;//分心
         CalcForm calc;
         public Form1()
         {
@@ -53,6 +54,7 @@ namespace WindowsFormsApp1
             buttonStart.Enabled = false;
             study = true;
             comboBox1.Enabled = false;
+            distracted = 0;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -73,6 +75,7 @@ namespace WindowsFormsApp1
                 buttonStart.Enabled = true;
                 study = false;
                 comboBox1.Enabled = true;
+                buttonGame.Enabled = true;
             }
         }
 
@@ -81,6 +84,12 @@ namespace WindowsFormsApp1
             if (study)
             {
                 MessageBox.Show("期末不想歐趴了484", "不准偷懶", MessageBoxButtons.OK);
+                distracted++;
+                //分心累積?次扣成長點數
+                if(distracted >= 5)//暫時隨便設的ㄏㄏ
+                {
+                    buttonGame.Enabled = false;
+                }
             }
         }
 
