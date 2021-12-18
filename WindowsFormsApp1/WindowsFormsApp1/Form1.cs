@@ -12,7 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        int time = 0;    
+        int time = 0;
+        bool study = false;
         CalcForm calc;
         public Form1()
         {
