@@ -12,10 +12,10 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        int time = 0;
+        int time = 0;//時間（秒數）
         bool study = false;
-        int distracted = 0;//分心
-        CalcForm calc;
+        int distracted = 0;//分心次數
+        CalcForm calc;//計算機by電神Jacob
         public Form1()
         {
             InitializeComponent();
@@ -26,28 +26,28 @@ namespace WindowsFormsApp1
 
         }
 
-        private void buttonGame_Click(object sender, EventArgs e)
+        private void buttonGame_Click(object sender, EventArgs e)//遊戲
         {
 
         }
 
-        private void buttonSchedule_Click(object sender, EventArgs e)
+        private void buttonSchedule_Click(object sender, EventArgs e)//讀書計畫表
         {
 
         }
 
-        private void buttonCalculator_Click(object sender, EventArgs e)
+        private void buttonCalculator_Click(object sender, EventArgs e)//計算機
         {
             calc = new CalcForm();
             calc.Show();
         }
         
-        private void buttonNote_Click(object sender, EventArgs e)
+        private void buttonNote_Click(object sender, EventArgs e)//日記
         {
 
         }
 
-        private void buttonStart_Click(object sender, EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)//按下開始讀書
         {
             time = int.Parse(comboBox1.Text) * 60;
             timer1.Enabled = true;
@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             distracted = 0;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)//倒數計時
         {
             time--;
             string temp = "0" + time / 3600 + ":";
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void buttonGame_MouseHover(object sender, EventArgs e)
+        private void buttonGame_MouseHover(object sender, EventArgs e)//滑鼠在讀書時滑過Game
         {
             if (study)
             {
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void comboBox1_TextChanged(object sender, EventArgs e)
+        private void comboBox1_TextChanged(object sender, EventArgs e)//即時更改顯示倒數
         {
             if (comboBox1.Text == "") comboBox1.Text = "0";
             try
