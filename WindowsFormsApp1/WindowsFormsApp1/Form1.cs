@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         int time = 0;
+        bool study = false;
+        //int 
         public Form1()
         {
             InitializeComponent();
@@ -47,11 +49,21 @@ namespace WindowsFormsApp1
         {
             time = int.Parse(comboBox1.Text) * 60;
             timer1.Enabled = true;
+            buttonStart.Enabled = false;
+            study = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            time--;
+        }
+
+        private void buttonGame_MouseHover(object sender, EventArgs e)
+        {
+            if (study)
+            {
+                MessageBox.Show("期末不想歐趴了484", "不准偷懶", MessageBoxButtons.OK);
+            }
         }
     }
 }

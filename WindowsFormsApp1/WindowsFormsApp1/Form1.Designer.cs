@@ -47,6 +47,7 @@
             this.buttonGame.Text = "遊戲";
             this.buttonGame.UseVisualStyleBackColor = true;
             this.buttonGame.Click += new System.EventHandler(this.buttonGame_Click);
+            this.buttonGame.MouseHover += new System.EventHandler(this.buttonGame_MouseHover);
             // 
             // buttonSchedule
             // 
