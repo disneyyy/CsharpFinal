@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         int point = 0;//養成點數
         bool newopen = true;//判斷重新開啟(for歡迎語)
         CalcForm calc;//計算機by電神Jacob
+        GameForm game;
 
         public Form1()
         {
@@ -34,7 +35,11 @@ namespace WindowsFormsApp1
 
         private void buttonGame_Click(object sender, EventArgs e)//遊戲
         {
-
+            game = new GameForm();
+            if (!study)
+            {
+                game.Show();
+            }
         }
 
         private void buttonSchedule_Click(object sender, EventArgs e)//讀書計畫表
@@ -134,7 +139,7 @@ namespace WindowsFormsApp1
                 comboBox1.Text = "360";
             } else if (T < 0)
             {
-                MessageBox.Show("時間不能為負！", "錯誤", MessageBoxButtons.OK);
+                MessageBox.Show("時間不能為負！", "你沒有時間寶石", MessageBoxButtons.OK);
                 T = 0;
                 comboBox1.Text = "0";
             }
