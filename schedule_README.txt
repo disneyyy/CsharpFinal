@@ -1,0 +1,6 @@
+讀書計畫表:
+可以紀錄早上六點到下午11點的事情
+新增的事項將會存在plans.txt上
+路徑在debug裡
+如果要移除事項:讓textbox空白、點擊要移除的button
+如果要查看事項:點查看內容的radio_button，在點擊要查看的button

@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         bool newopen = true;//判斷重新開啟(for歡迎語)
         CalcForm calc;//計算機by電神Jacob
         GameForm game;
-
+        Schedule schedule;
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +44,8 @@ namespace WindowsFormsApp1
 
         private void buttonSchedule_Click(object sender, EventArgs e)//讀書計畫表
         {
-
+            schedule = new Schedule();
+            schedule.Show();
         }
 
         private void buttonCalculator_Click(object sender, EventArgs e)//計算機

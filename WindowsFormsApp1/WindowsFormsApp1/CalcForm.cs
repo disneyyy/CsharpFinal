@@ -27,5 +27,10 @@ namespace WindowsFormsApp1
             else
                 input.Text = calc.getResult().ToString();
         }
+
+        private void CalcForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
