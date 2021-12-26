@@ -52,8 +52,7 @@ namespace WindowsFormsApp1
                 if(plans_text_array[i] != "")
                 {
                     plans[i].BackColor = Color.NavajoWhite;
-                    text = plans_text_array[i];
-                    plans[i].Text = text;
+                    plans[i].Text = plans_text_array[i];
                 }
                 Controls.Add(plans[i]);
                 x++;
@@ -67,18 +66,18 @@ namespace WindowsFormsApp1
         {
             Button btnClick = (Button)sender;
             int index = Array.IndexOf(plans, btnClick);
-            if(radioButton1.Checked == true)
+            if(checkBox1.Checked == true)
             {
                 MessageBox.Show(btnClick.Text);
             }
-            else if (text != "" && radioButton1.Checked == false)
+            else if (text != "" && checkBox1.Checked == false)
             {
                 btnClick.Text = text;
                 btnClick.BackColor = Color.NavajoWhite;
                 plans_text_array[index] = text;
                 write_text(plans_text_array);
             }
-            else if (text == "" && radioButton1.Checked == false)
+            else if (text == "" && checkBox1.Checked == false)
             {
                 btnClick.Text = "";
                 btnClick.BackColor = Color.White;
@@ -91,6 +90,7 @@ namespace WindowsFormsApp1
         private void write_text(string[] plans_text)
         {
             try{
+                
                 StreamWriter str = new StreamWriter(filename);
                 for(int i = 0; i < 119; i++)
                 {
@@ -100,6 +100,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception e)
             {
+               
                 Console.WriteLine("Exception: " + e.Message);
             }
         }
@@ -121,11 +122,6 @@ namespace WindowsFormsApp1
             {
                 Console.WriteLine("Exception: " + e.Message);
             }
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
