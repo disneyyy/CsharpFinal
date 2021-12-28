@@ -125,6 +125,10 @@ namespace WindowsFormsApp1
                     return Math.Log10(this.left.evalTree());
                 case NodeType.LN:
                     return Math.Log(this.left.evalTree());
+                case NodeType.COS:
+                    return Math.Cos(this.left.evalTree());
+                case NodeType.SIN:
+                    return Math.Sin(this.left.evalTree());
                 default:
                     Console.WriteLine("Error evaluating");
                     return 0.0f;
@@ -144,6 +148,8 @@ namespace WindowsFormsApp1
         SQRT,
         POW,
         LOG,
-        LN
+        LN,
+        COS,
+        SIN
     }
 }

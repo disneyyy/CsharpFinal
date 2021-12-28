@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         TreeNode parseE()
         {
             if (nextChar >= str.Length) {
+                errorflag = true;
                 return null;
             }
             TreeNode a = this.parseT();
@@ -51,6 +52,7 @@ namespace WindowsFormsApp1
         TreeNode parseT()
         {
             if (nextChar >= str.Length) {
+                errorflag = true;
                 return null;
             }
             TreeNode a = parseF();
@@ -72,10 +74,12 @@ namespace WindowsFormsApp1
         TreeNode parseF()
         {
             if (nextChar >= str.Length) {
+                errorflag = true;
                 return null;
             }
             TreeNode a;
-            if (str[nextChar] == '(') {
+            if (str[nextChar] == '(')
+            {
                 scanToken();
                 a = parseE();
                 if (this.checkRightParenthesis())
@@ -84,13 +88,16 @@ namespace WindowsFormsApp1
                     return null;
             }
             //NEG
-            else if (nextChar < str.Length && str[nextChar] == '-') {
+            else if (nextChar < str.Length && str[nextChar] == '-')
+            {
                 scanToken();
                 a = buildNeg(parseT());
             }
             //SQRT
-            else if (nextChar + 4 < str.Length && str.Substring(nextChar, 4) == "sqrt") {
-                for (int i = 0; i < 5; i++) {
+            else if (nextChar + 4 < str.Length && str.Substring(nextChar, 4) == "sqrt")
+            {
+                for (int i = 0; i < 5; i++)
+                {
                     scanToken();
                 }
                 a = buildSqrt(parseE());
@@ -100,8 +107,10 @@ namespace WindowsFormsApp1
                     return null;
             }
             //LOG
-            else if (nextChar + 3 < str.Length && str.Substring(nextChar, 3) == "log") {
-                for (int i = 0; i < 4; i++) {
+            else if (nextChar + 3 < str.Length && str.Substring(nextChar, 3) == "log")
+            {
+                for (int i = 0; i < 4; i++)
+                {
                     scanToken();
                 }
                 a = buildLog(parseE());
@@ -111,8 +120,10 @@ namespace WindowsFormsApp1
                     return null;
             }
             //LN
-            else if (nextChar + 2 < str.Length && str.Substring(nextChar, 2) == "ln") {
-                for (int i = 0; i < 3; i++) {
+            else if (nextChar + 2 < str.Length && str.Substring(nextChar, 2) == "ln")
+            {
+                for (int i = 0; i < 3; i++)
+                {
                     scanToken();
                 }
                 a = buildLn(parseE());
@@ -120,7 +131,33 @@ namespace WindowsFormsApp1
                     ;
                 else
                     return null;
-            } else
+            }
+            else if (nextChar + 3 < str.Length && str.Substring(nextChar, 3) == "cos")
+            {
+                //scan cos including left parethesis
+                for (int i = 0; i < 4; i++)
+                {
+                    scanToken();
+                }
+                a = buildCos(parseE());
+                if (this.checkRightParenthesis())
+                    ;
+                else
+                    return null;
+            }
+            else if (nextChar + 3 < str.Length && str.Substring(nextChar, 3) == "sin")
+            {
+                //scan cos including left parethesis
+                for (int i = 0; i < 4; i++)
+                {
+                    scanToken();
+                }
+                a = buildSin(parseE());
+                if (this.checkRightParenthesis())
+                    ;
+                else
+                    return null;
+            }else
                 a = parseNumber();
             //Power  ^ check
             if (nextChar < str.Length && str[nextChar] == '^') {
@@ -173,6 +210,7 @@ namespace WindowsFormsApp1
                 fraction /= 10;
                 digitAfterPoint--;
             }
+            scanSpaces();
             double res = val + fraction;
             TreeNode temp = new TreeNode(NodeType.NUMBER, res, "");
             return temp;
@@ -235,6 +273,24 @@ namespace WindowsFormsApp1
             TreeNode temp = new TreeNode(NodeType.LN, 0.0f, "ln");
             temp.left = a;
             return temp;
+        }
+        TreeNode buildCos(TreeNode a)
+        {
+            TreeNode temp = new TreeNode(NodeType.COS, 0.0f, "cos");
+            temp.left = a;
+            return temp;
+        }
+        TreeNode buildSin(TreeNode a)
+        {
+            TreeNode temp = new TreeNode(NodeType.SIN, 0.0f, "cos");
+            temp.left = a;
+            return temp;
+        }
+        void scanSpaces()
+        {
+            while (nextChar < str.Length && str[nextChar] == ' ')
+                nextChar++;
+            return;
         }
     }
 }
