@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class GameForm : Form
     {
+        snake snake;
         public GameForm()
         {
             InitializeComponent();
@@ -19,7 +20,13 @@ namespace WindowsFormsApp1
 
         private void GameForm_Load(object sender, EventArgs e)
         {
+            game1.Text = "貪食蛇";
+        }
 
+        private void game1_Click(object sender, EventArgs e)
+        {
+            snake = new snake();
+            snake.Show();
         }
     }
 }
