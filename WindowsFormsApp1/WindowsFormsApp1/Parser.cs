@@ -192,6 +192,11 @@ namespace WindowsFormsApp1
             int val = 0;
             double fraction = 0;
             int digitAfterPoint = 0;
+            if(nextChar >= str.Length || !(str[nextChar] - '0' >= 0 && str[nextChar]  - '0' <= 9))
+            {
+                errorflag = true;
+                return null;
+            }
             while (nextChar < str.Length && str[nextChar] - '0' >= 0 && str[nextChar] - '0' <= 9) {
                 val *= 10;
                 val += str[nextChar] - '0';
