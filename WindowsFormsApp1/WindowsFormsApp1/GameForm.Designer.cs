@@ -43,6 +43,7 @@
             this.game1.TabIndex = 0;
             this.game1.Text = "1";
             this.game1.UseVisualStyleBackColor = true;
+            this.game1.Click += new System.EventHandler(this.game1_Click);
             // 
             // game2
             // 
