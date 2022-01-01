@@ -49,6 +49,9 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.load_btn = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.labelClock = new System.Windows.Forms.Label();
+            this.buttonStop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,11 +234,37 @@
             this.load_btn.UseVisualStyleBackColor = true;
             this.load_btn.Click += new System.EventHandler(this.load_btn_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // labelClock
+            // 
+            this.labelClock.AutoSize = true;
+            this.labelClock.Location = new System.Drawing.Point(180, 36);
+            this.labelClock.Name = "labelClock";
+            this.labelClock.Size = new System.Drawing.Size(0, 15);
+            this.labelClock.TabIndex = 14;
+            // 
+            // buttonStop
+            // 
+            this.buttonStop.Enabled = false;
+            this.buttonStop.Location = new System.Drawing.Point(532, 401);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(83, 29);
+            this.buttonStop.TabIndex = 2;
+            this.buttonStop.Text = "中斷";
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelClock);
             this.Controls.Add(this.load_btn);
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.message);
@@ -247,6 +276,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pic_cat);
             this.Controls.Add(this.labelTime);
+            this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonNote);
@@ -254,7 +284,7 @@
             this.Controls.Add(this.buttonCalculator);
             this.Controls.Add(this.buttonGame);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "貓起來念";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_cat)).EndInit();
             this.ResumeLayout(false);
@@ -284,6 +314,9 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button load_btn;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label labelClock;
+        private System.Windows.Forms.Button buttonStop;
     }
 }
 

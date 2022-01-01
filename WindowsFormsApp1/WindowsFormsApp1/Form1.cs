@@ -31,6 +31,9 @@ namespace WindowsFormsApp1
         {
             pic_cat.Image = Image.FromFile(@"..\..\cats\cat" + level + ".png"); //目前貓咪圖片
             pic_cat.SizeMode = PictureBoxSizeMode.Zoom;
+            DateTime myDate = DateTime.Now;
+            string myDateString = myDate.ToString("yyyy-MM-dd HH:mm");
+            labelClock.Text = "現在時間\n" + myDateString;
         }
 
         private void buttonGame_Click(object sender, EventArgs e)//遊戲
@@ -70,8 +73,22 @@ namespace WindowsFormsApp1
             study = true;
             comboBox1.Enabled = false;
             distracted = 0;
+            buttonStop.Enabled = true;
 
             message.Text = "讀書中~";
+        }
+        private void buttonStop_Click(object sender, EventArgs e)//按下開始讀書
+        {
+            if (MessageBox.Show("確定中斷？此次讀書時間將不會讓貓咪成長", "警告", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+            labelTime.Text = "01:00:00";
+            comboBox1.Text = "60";
+            timer1.Enabled = false;
+            buttonStart.Enabled = true;
+            study = false;
+            comboBox1.Enabled = true;
+            buttonGame.Enabled = true;
+            buttonStop.Enabled = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)//倒數計時
@@ -235,6 +252,13 @@ namespace WindowsFormsApp1
                 levelup(point, level, newopen);
 
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            DateTime myDate = DateTime.Now;
+            string myDateString = myDate.ToString("yyyy-MM-dd HH:mm");
+            labelClock.Text = "現在時間\n" + myDateString;
         }
     }
 }
