@@ -35,11 +35,24 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (radioButton1.Checked)
+            {
+               timer1.Interval = 200;
+            }
+            else if (radioButton2.Checked)
+            {
+                timer1.Interval = 50;
+            }
+            else if (radioButton3.Checked)
+            {
+                timer1.Interval = 5;
+            }
             button1.Enabled = false; button1.Visible = false;
             button1.Text = "重新開始";
             gmae_init();
             timer1.Enabled = true;
             label1.Visible = false;
+            groupbox.Visible = false;
         }
 
         public snake()
@@ -61,6 +74,16 @@ namespace WindowsFormsApp1
             label1.Text = "遊戲說明\n點擊左上方開始遊戲\nW:轉向上方\nA:轉向左邊\nS:轉向後面\nD:轉向右邊\nP:暫停遊戲";
             label1.Visible = true;
             label2.Text = "分數:";
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
@@ -108,6 +131,7 @@ namespace WindowsFormsApp1
                 label1.Text = "遊戲結束";
                 label1.Visible = true;
                 button1.Enabled = true; button1.Visible = true;
+                groupbox.Visible = true;
                 return;
             }
             //---------------  snake tail update -------------------------------------- 
@@ -122,6 +146,7 @@ namespace WindowsFormsApp1
 
         void gmae_init()
         {
+            
             SNAKE_COLOR = Color.White;
             R = G = B = 255;
 
@@ -140,7 +165,7 @@ namespace WindowsFormsApp1
             do { snake_dir = rander.Next(0, 4) + 1; } while (snake_dir == 3);
 
             game_mode = 1; snake_move = 1; score = 0;
-            label1.Text = ""; label2.Text = "Score:" + score;
+            label1.Text = ""; label2.Text = "分數:" + score;
             new_bonus();
         }
         void new_bonus()
@@ -154,10 +179,10 @@ namespace WindowsFormsApp1
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.W) { if (snake_dir != 2) snake_dir = 1; }
-            if (e.KeyCode == Keys.S) { if (snake_dir != 1) snake_dir = 2; }
-            if (e.KeyCode == Keys.A) { if (snake_dir != 4) snake_dir = 3; }
-            if (e.KeyCode == Keys.D) { if (snake_dir != 3) snake_dir = 4; }
+            if (e.KeyCode == Keys.W || e.KeyCode == Keys.Up) { if (snake_dir != 2) snake_dir = 1; }
+            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down) { if (snake_dir != 1) snake_dir = 2; }
+            if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left) { if (snake_dir != 4) snake_dir = 3; }
+            if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right) { if (snake_dir != 3) snake_dir = 4; }
 
             if (e.KeyCode == Keys.P)
             {
