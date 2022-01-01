@@ -86,6 +86,24 @@
     <Compile Include="snake.Designer.cs">
       <DependentUpon>snake.cs</DependentUpon>
     </Compile>
+    <Compile Include="StickyNoteDrawForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StickyNoteDrawForm.Designer.cs">
+      <DependentUpon>StickyNoteDrawForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StickyNoteSelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StickyNoteSelForm.Designer.cs">
+      <DependentUpon>StickyNoteSelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StickyNoteTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StickyNoteTextForm.Designer.cs">
+      <DependentUpon>StickyNoteTextForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TreeNode.cs" />
     <EmbeddedResource Include="Blocks.resx">
       <DependentUpon>Blocks.cs</DependentUpon>
@@ -115,6 +133,15 @@
     <EmbeddedResource Include="snake.resx">
       <DependentUpon>snake.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StickyNoteDrawForm.resx">
+      <DependentUpon>StickyNoteDrawForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StickyNoteSelForm.resx">
+      <DependentUpon>StickyNoteSelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StickyNoteTextForm.resx">
+      <DependentUpon>StickyNoteTextForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +158,12 @@
   <ItemGroup>
     <Content Include="powerX.png" />
     <None Include="Resources\root.png" />
+    <None Include="Resources\x.jpg" />
+    <None Include="Resources\x.png" />
+    <None Include="Resources\x1.png" />
+    <None Include="Resources\penIcon.png" />
+    <None Include="Resources\move.png" />
+    <None Include="Resources\move1.png" />
     <Content Include="root.png" />
     <None Include="Resources\powerX.png" />
   </ItemGroup>

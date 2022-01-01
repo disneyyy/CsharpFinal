@@ -59,7 +59,8 @@ namespace WindowsFormsApp1
 
         private void buttonNote_Click(object sender, EventArgs e)//日記
         {
-
+            Form sel = new StickyNoteSelForm();
+            sel.Show();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)//按下開始讀書
