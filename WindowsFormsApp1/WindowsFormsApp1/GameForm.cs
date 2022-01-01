@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class GameForm : Form
     {
         snake snake;
+        Blocks blocks;
         public GameForm()
         {
             InitializeComponent();
@@ -27,6 +28,12 @@ namespace WindowsFormsApp1
         {
             snake = new snake();
             snake.Show();
+        }
+
+        private void game3_Click(object sender, EventArgs e)
+        {
+            blocks = new Blocks();
+            blocks.Show();
         }
     }
 }

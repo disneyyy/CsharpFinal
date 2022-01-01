@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks.Designer.cs">
+      <DependentUpon>Blocks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calc.cs" />
     <Compile Include="CalcForm.cs">
       <SubType>Form</SubType>
@@ -81,6 +87,9 @@
       <DependentUpon>snake.cs</DependentUpon>
     </Compile>
     <Compile Include="TreeNode.cs" />
+    <EmbeddedResource Include="Blocks.resx">
+      <DependentUpon>Blocks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcForm.resx">
       <DependentUpon>CalcForm.cs</DependentUpon>
     </EmbeddedResource>

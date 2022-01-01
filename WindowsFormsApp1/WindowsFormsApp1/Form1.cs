@@ -89,6 +89,7 @@ namespace WindowsFormsApp1
             comboBox1.Enabled = true;
             buttonGame.Enabled = true;
             buttonStop.Enabled = false;
+            load_btn.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)//倒數計時
