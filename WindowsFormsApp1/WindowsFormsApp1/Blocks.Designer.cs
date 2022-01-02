@@ -112,6 +112,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelScore);
+            this.KeyPreview = true;
             this.Name = "Blocks";
             this.Text = "Blocks";
             this.Load += new System.EventHandler(this.Blocks_Load);

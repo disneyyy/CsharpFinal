@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
 
         private void Blocks_Load(object sender, EventArgs e)
         {
-            label3.Text = "Press A to go left\nPress D to go right\nPink block:     1 point\nYellow block: 5 point\nPurple block: deadly\n\nDon't let Pink blocks reach\nthe floor!";
+            label3.Text = "Press A to go left\nPress D to go right\nPress Left to go to left corner\nPress Right to go to right corner\n\nPink block:     1 point\nYellow block: 5 point\nPurple block: deadly\n\nDon't let Pink blocks reach\nthe floor!";
             this.KeyPreview = true;
             background.SetBounds(179, 34, 41 * 8+1, 41 * 7+1);
             background.BackColor = Color.Black;
@@ -172,7 +172,21 @@ namespace WindowsFormsApp1
                     if (player.Left < 180 + 41*7)
                         player.Left += 41;
                     break;
+                case Keys.Left:
+                    player.Left = 180;
+                    break;
+                case Keys.Right:
+                    player.Left = 180 + 41 * 7;
+                    break;
             }
         }
-    }
+
+        protected override bool ProcessDialogKey(Keys keyCode)
+        {
+            if (keyCode == Keys.Up || keyCode == Keys.Down || keyCode == Keys.Left || keyCode == Keys.Right)
+                return false;
+            else
+                return base.ProcessDialogKey(keyCode);
+        }
+}
 }
