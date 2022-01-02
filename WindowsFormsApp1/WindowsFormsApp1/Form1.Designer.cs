@@ -145,7 +145,7 @@
             this.labelTime.ForeColor = System.Drawing.SystemColors.Window;
             this.labelTime.Location = new System.Drawing.Point(645, 407);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(129, 34);
+            this.labelTime.Size = new System.Drawing.Size(129, 33);
             this.labelTime.TabIndex = 3;
             this.labelTime.Text = "01:00:00";
             // 
@@ -247,7 +247,7 @@
             // 
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.save_btn.Location = new System.Drawing.Point(42, 146);
-            this.save_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.save_btn.Margin = new System.Windows.Forms.Padding(2);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(55, 32);
             this.save_btn.TabIndex = 12;
@@ -263,7 +263,7 @@
             // 
             this.load_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.load_btn.Location = new System.Drawing.Point(101, 146);
-            this.load_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.load_btn.Margin = new System.Windows.Forms.Padding(2);
             this.load_btn.Name = "load_btn";
             this.load_btn.Size = new System.Drawing.Size(55, 32);
             this.load_btn.TabIndex = 13;
