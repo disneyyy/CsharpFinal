@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         public GameForm()
         {
             InitializeComponent();
+            pictureBox1.Image = Image.FromFile(@"..\..\Resources\GameBackground.jpeg");
         }
 
         private void GameForm_Load(object sender, EventArgs e)

@@ -34,6 +34,20 @@ namespace WindowsFormsApp1
             DateTime myDate = DateTime.Now;
             string myDateString = myDate.ToString("yyyy-MM-dd HH:mm");
             labelClock.Text = "現在時間\n" + myDateString;
+
+            pic_cat.Parent = pictureBox1;
+            label1.Parent = pictureBox1;
+            label2.Parent = pictureBox1;
+            label3.Parent = pictureBox1;
+            labelTime.Parent = pictureBox1;
+            point_Label.Parent = pictureBox1;
+            breed_Label.Parent = pictureBox1;
+            level_Label.Parent = pictureBox1;
+            labelClock.Parent = pictureBox1;
+            message.Parent = pictureBox1;
+            pic_cat.BackColor = Color.Transparent;
+            pictureBox1.Image = Image.FromFile(@"..\..\Resources\MenuBackground.jpg");
+
         }
 
         private void buttonGame_Click(object sender, EventArgs e)//遊戲
