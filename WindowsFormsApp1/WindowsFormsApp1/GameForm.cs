@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     {
         snake snake;
         Blocks blocks;
+        Piano piano;
+
         public GameForm()
         {
             InitializeComponent();
@@ -35,6 +37,12 @@ namespace WindowsFormsApp1
         {
             blocks = new Blocks();
             blocks.Show();
+        }
+
+        private void game2_Click(object sender, EventArgs e)
+        {
+            piano = new Piano();
+            piano.Show();
         }
     }
 }
