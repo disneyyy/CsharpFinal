@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
             labelClock.Parent = pictureBox1;
             message.Parent = pictureBox1;
             pic_cat.BackColor = Color.Transparent;
-            pictureBox1.Image = Image.FromFile(@"..\..\Resources\MenuBackground.jpg");
+            pictureBox1.Image = Image.FromFile(@"..\..\Resources\123.jpg");
 
         }
 

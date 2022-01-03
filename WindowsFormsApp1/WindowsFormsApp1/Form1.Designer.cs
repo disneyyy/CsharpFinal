@@ -152,9 +152,9 @@
             // pic_cat
             // 
             this.pic_cat.BackColor = System.Drawing.Color.Transparent;
-            this.pic_cat.Location = new System.Drawing.Point(51, 232);
+            this.pic_cat.Location = new System.Drawing.Point(51, 192);
             this.pic_cat.Name = "pic_cat";
-            this.pic_cat.Size = new System.Drawing.Size(225, 235);
+            this.pic_cat.Size = new System.Drawing.Size(225, 275);
             this.pic_cat.TabIndex = 4;
             this.pic_cat.TabStop = false;
             // 
