@@ -152,9 +152,9 @@
             // pic_cat
             // 
             this.pic_cat.BackColor = System.Drawing.Color.Transparent;
-            this.pic_cat.Location = new System.Drawing.Point(51, 208);
+            this.pic_cat.Location = new System.Drawing.Point(51, 232);
             this.pic_cat.Name = "pic_cat";
-            this.pic_cat.Size = new System.Drawing.Size(225, 259);
+            this.pic_cat.Size = new System.Drawing.Size(225, 235);
             this.pic_cat.TabIndex = 4;
             this.pic_cat.TabStop = false;
             // 
@@ -164,7 +164,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(47, 70);
+            this.label1.Location = new System.Drawing.Point(45, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 19);
             this.label1.TabIndex = 5;
@@ -176,7 +176,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(47, 98);
+            this.label2.Location = new System.Drawing.Point(45, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 19);
             this.label2.TabIndex = 6;
@@ -188,7 +188,7 @@
             this.point_Label.BackColor = System.Drawing.Color.Transparent;
             this.point_Label.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.point_Label.ForeColor = System.Drawing.SystemColors.Control;
-            this.point_Label.Location = new System.Drawing.Point(92, 70);
+            this.point_Label.Location = new System.Drawing.Point(90, 36);
             this.point_Label.Name = "point_Label";
             this.point_Label.Size = new System.Drawing.Size(18, 19);
             this.point_Label.TabIndex = 7;
@@ -200,7 +200,7 @@
             this.level_Label.BackColor = System.Drawing.Color.Transparent;
             this.level_Label.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.level_Label.ForeColor = System.Drawing.SystemColors.Control;
-            this.level_Label.Location = new System.Drawing.Point(92, 98);
+            this.level_Label.Location = new System.Drawing.Point(90, 64);
             this.level_Label.Name = "level_Label";
             this.level_Label.Size = new System.Drawing.Size(18, 19);
             this.level_Label.TabIndex = 8;
@@ -212,7 +212,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(47, 124);
+            this.label3.Location = new System.Drawing.Point(45, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 19);
             this.label3.TabIndex = 9;
@@ -224,7 +224,7 @@
             this.breed_Label.BackColor = System.Drawing.Color.Transparent;
             this.breed_Label.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.breed_Label.ForeColor = System.Drawing.SystemColors.Control;
-            this.breed_Label.Location = new System.Drawing.Point(92, 124);
+            this.breed_Label.Location = new System.Drawing.Point(90, 90);
             this.breed_Label.Name = "breed_Label";
             this.breed_Label.Size = new System.Drawing.Size(69, 19);
             this.breed_Label.TabIndex = 10;
@@ -237,7 +237,7 @@
             this.message.Cursor = System.Windows.Forms.Cursors.Default;
             this.message.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.message.ForeColor = System.Drawing.SystemColors.Control;
-            this.message.Location = new System.Drawing.Point(38, 181);
+            this.message.Location = new System.Drawing.Point(36, 165);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(105, 24);
             this.message.TabIndex = 11;
@@ -246,7 +246,7 @@
             // save_btn
             // 
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.save_btn.Location = new System.Drawing.Point(42, 146);
+            this.save_btn.Location = new System.Drawing.Point(40, 112);
             this.save_btn.Margin = new System.Windows.Forms.Padding(2);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(55, 32);
@@ -262,7 +262,7 @@
             // load_btn
             // 
             this.load_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.load_btn.Location = new System.Drawing.Point(101, 146);
+            this.load_btn.Location = new System.Drawing.Point(99, 112);
             this.load_btn.Margin = new System.Windows.Forms.Padding(2);
             this.load_btn.Name = "load_btn";
             this.load_btn.Size = new System.Drawing.Size(55, 32);
