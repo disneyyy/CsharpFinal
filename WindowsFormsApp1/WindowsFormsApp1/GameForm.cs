@@ -44,5 +44,11 @@ namespace WindowsFormsApp1
             piano = new Piano();
             piano.Show();
         }
+
+        private void game4_Click(object sender, EventArgs e)
+        {
+            Form f = new BreakoutClone();
+            f.Show();
+        }
     }
 }

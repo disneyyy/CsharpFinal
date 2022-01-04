@@ -39,11 +39,11 @@
             // game1
             // 
             this.game1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.game1.Font = new System.Drawing.Font("新細明體", 15F);
-            this.game1.Location = new System.Drawing.Point(216, 476);
-            this.game1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.game1.Font = new System.Drawing.Font("PMingLiU", 15F);
+            this.game1.Location = new System.Drawing.Point(255, 544);
+            this.game1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.game1.Name = "game1";
-            this.game1.Size = new System.Drawing.Size(186, 137);
+            this.game1.Size = new System.Drawing.Size(220, 157);
             this.game1.TabIndex = 0;
             this.game1.Text = "貪食蛇";
             this.game1.UseVisualStyleBackColor = true;
@@ -52,11 +52,11 @@
             // game2
             // 
             this.game2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.game2.Font = new System.Drawing.Font("新細明體", 15F);
-            this.game2.Location = new System.Drawing.Point(686, 17);
-            this.game2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.game2.Font = new System.Drawing.Font("PMingLiU", 15F);
+            this.game2.Location = new System.Drawing.Point(811, 19);
+            this.game2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.game2.Name = "game2";
-            this.game2.Size = new System.Drawing.Size(198, 150);
+            this.game2.Size = new System.Drawing.Size(234, 171);
             this.game2.TabIndex = 0;
             this.game2.Text = "鋼琴";
             this.game2.UseVisualStyleBackColor = true;
@@ -65,11 +65,11 @@
             // game3
             // 
             this.game3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.game3.Font = new System.Drawing.Font("新細明體", 15F);
-            this.game3.Location = new System.Drawing.Point(147, 74);
-            this.game3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.game3.Font = new System.Drawing.Font("PMingLiU", 15F);
+            this.game3.Location = new System.Drawing.Point(174, 85);
+            this.game3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.game3.Name = "game3";
-            this.game3.Size = new System.Drawing.Size(195, 141);
+            this.game3.Size = new System.Drawing.Size(230, 161);
             this.game3.TabIndex = 0;
             this.game3.Text = "接方塊";
             this.game3.UseVisualStyleBackColor = true;
@@ -78,36 +78,37 @@
             // game4
             // 
             this.game4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.game4.Font = new System.Drawing.Font("新細明體", 15F);
-            this.game4.Location = new System.Drawing.Point(763, 469);
-            this.game4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.game4.Font = new System.Drawing.Font("PMingLiU", 15F);
+            this.game4.Location = new System.Drawing.Point(902, 536);
+            this.game4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.game4.Name = "game4";
-            this.game4.Size = new System.Drawing.Size(208, 144);
+            this.game4.Size = new System.Drawing.Size(246, 165);
             this.game4.TabIndex = 0;
-            this.game4.Text = "4";
+            this.game4.Text = "打磚塊";
             this.game4.UseVisualStyleBackColor = true;
+            this.game4.Click += new System.EventHandler(this.game4_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1103, 643);
+            this.pictureBox1.Size = new System.Drawing.Size(1304, 735);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 630);
+            this.ClientSize = new System.Drawing.Size(1300, 720);
             this.Controls.Add(this.game4);
             this.Controls.Add(this.game2);
             this.Controls.Add(this.game3);
             this.Controls.Add(this.game1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "GameForm";
             this.Text = "GameForm";
             this.Load += new System.EventHandler(this.GameForm_Load);
