@@ -33,11 +33,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupbox = new System.Windows.Forms.GroupBox();
-            this.groupbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -73,63 +68,11 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(5, 23);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 19);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "簡單";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(5, 68);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 19);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.Text = "中等";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(5, 112);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(58, 19);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.Text = "困難";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // groupbox
-            // 
-            this.groupbox.Controls.Add(this.radioButton1);
-            this.groupbox.Controls.Add(this.radioButton3);
-            this.groupbox.Controls.Add(this.radioButton2);
-            this.groupbox.Location = new System.Drawing.Point(13, 317);
-            this.groupbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupbox.Name = "groupbox";
-            this.groupbox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupbox.Size = new System.Drawing.Size(113, 158);
-            this.groupbox.TabIndex = 6;
-            this.groupbox.TabStop = false;
-            this.groupbox.Text = "貪食蛇難度";
-            this.groupbox.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
             // snake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 537);
-            this.Controls.Add(this.groupbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -138,8 +81,6 @@
             this.Text = "snake";
             this.Load += new System.EventHandler(this.snake_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.groupbox.ResumeLayout(false);
-            this.groupbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,9 +92,5 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.GroupBox groupbox;
     }
 }
