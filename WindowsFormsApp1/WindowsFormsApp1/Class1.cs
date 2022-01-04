@@ -16,8 +16,8 @@ namespace WindowsFormsApp1
         const int snake_init_length = 5, snake_row = 10, snake_length = row * column + 100, snake_add = 5;
         Color snake_body_color = Color.White;
         Color snake_head_color = Color.Red;
-        Color background_color = Color.Black;
-        Color bonus_color = Color.Red;
+        Color BG_COLOR = Color.Black;
+        Color BONUS_COLOR = Color.Red;
         int R = 255, G = 255, B = 255;
         Label[,] grids = new Label[row, column];
         Point[] snake_q = new Point[snake_length];
@@ -27,10 +27,24 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (radioButton1.Checked)
+            {
+                timer1.Interval = 200;
+            }
+            else if (radioButton2.Checked)
+            {
+                timer1.Interval = 50;
+            }
+            else if (radioButton3.Checked)
+            {
+                timer1.Interval = 5;
+            }
             button1.Enabled = false; button1.Visible = false;
             button1.Text = "重新開始";
             gmae_init();
             timer1.Enabled = true;
+            label1.Visible = true;
+            groupbox.Visible = false;
         }
 
         public snake()
@@ -42,13 +56,13 @@ namespace WindowsFormsApp1
                 {
                     grids[i, j] = new Label();
                     grids[i, j].Width = width; grids[i, j].Height = height;
-                    grids[i, j].BackColor = background_color;
+                    grids[i, j].BackColor = BG_COLOR;
                     grids[i, j].Left = j * width + position_x;
                     grids[i, j].Top = i * height + position_y;
                     grids[i, j].Visible = true;
                     this.Controls.Add(grids[i, j]);
                 }
-            label1.Text = "遊戲說明\n點擊左上方開始遊戲\nW:轉向上方\nA:轉向左邊\nS:轉向後面\nD:轉向右邊\nP:暫停遊戲\n分數越高貪食蛇速度越快喔!!";
+            label1.Text = "遊戲說明\n點擊左上方開始遊戲\nW:轉向上方\nA:轉向左邊\nS:轉向後面\nD:轉向右邊\nP:暫停遊戲";
             label1.Visible = true;
             label2.Text = "分數:";
         }
@@ -90,14 +104,10 @@ namespace WindowsFormsApp1
             grids[y, x].BackColor = snake_body_color;
 
             if (inside_snake(1, bonus.X, bonus.Y))
-            {  
+            {   // snake gets the bonus square
                 new_bonus();
                 snake_move += snake_add;
                 score += 100;
-                if(timer1.Interval > 5)
-                {
-                    timer1.Interval -= 5;
-                }
                 label2.Text = "分數:" + score;
                 if (R > 0) { R -= 8; if (R < 0) R = 0; }
                 else { G -= 8; if (G < 0) G = 0; }
@@ -105,17 +115,19 @@ namespace WindowsFormsApp1
             }
 
             if (inside_snake(0, snake_q[snake_head].X, snake_q[snake_head].Y))
-            {  
+            {   //snake bites itself and "game over"!
                 timer1.Enabled = false;
                 draw_snake();
                 label1.Text = "遊戲結束";
                 label1.Visible = true;
                 button1.Enabled = true; button1.Visible = true;
+                groupbox.Visible = true;
                 return;
             }
+            //---------------  snake tail update -------------------------------------- 
             if (snake_move == 1)
             {
-                grids[snake_q[snake_tail].Y, snake_q[snake_tail].X].BackColor = background_color;
+                grids[snake_q[snake_tail].Y, snake_q[snake_tail].X].BackColor = BG_COLOR;
                 if (++snake_tail == snake_length) snake_tail = 0;
             }
             else
@@ -124,13 +136,13 @@ namespace WindowsFormsApp1
 
         void gmae_init()
         {
-            label1.Text = "遊戲說明\n點擊左上方開始遊戲\nW:轉向上方\nA:轉向左邊\nS:轉向後面\nD:轉向右邊\nP:暫停遊戲\n分數越高貪食蛇速度越快喔!!";
+
             snake_body_color = Color.White;
             R = G = B = 255;
 
             for (int i = 0; i < row; i++)
                 for (int j = 0; j < column; j++)
-                    grids[i, j].BackColor = background_color;
+                    grids[i, j].BackColor = BG_COLOR;
 
             for (int i = 0; i < snake_init_length; i++)
             {
@@ -143,7 +155,7 @@ namespace WindowsFormsApp1
             do { snake_dir = rander.Next(0, 4) + 1; } while (snake_dir == 3);
 
             game_mode = 1; snake_move = 1; score = 0;
-            label2.Text = "分數:" + score;
+            label1.Text = ""; label2.Text = "分數:" + score;
             new_bonus();
         }
         void new_bonus()
@@ -153,7 +165,7 @@ namespace WindowsFormsApp1
                 bonus.X = rander.Next(0, row);
                 bonus.Y = rander.Next(0, column);
             } while (inside_snake(1, bonus.X, bonus.Y));
-            grids[bonus.Y, bonus.X].BackColor = bonus_color;
+            grids[bonus.Y, bonus.X].BackColor = BONUS_COLOR;
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -187,6 +199,7 @@ namespace WindowsFormsApp1
         void draw_snake()
         {
             int s, e;
+
             s = snake_head; e = snake_tail;
             do
             {
