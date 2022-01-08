@@ -143,7 +143,7 @@
             this.labelTime.BackColor = System.Drawing.Color.Transparent;
             this.labelTime.Font = new System.Drawing.Font("新細明體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labelTime.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelTime.Location = new System.Drawing.Point(645, 407);
+            this.labelTime.Location = new System.Drawing.Point(636, 404);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(129, 33);
             this.labelTime.TabIndex = 3;
@@ -282,7 +282,7 @@
             this.labelClock.AutoSize = true;
             this.labelClock.BackColor = System.Drawing.Color.Transparent;
             this.labelClock.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelClock.Location = new System.Drawing.Point(648, 373);
+            this.labelClock.Location = new System.Drawing.Point(639, 370);
             this.labelClock.Name = "labelClock";
             this.labelClock.Size = new System.Drawing.Size(63, 15);
             this.labelClock.TabIndex = 14;
