@@ -187,13 +187,13 @@ namespace WindowsFormsApp1
         {
             int currentlevel = level;
 
-            if (point <= 0)
+            if (point < 0)
             {
                 level = 0;
                 breed_Label.Text = "X";
                 message.Text = "感覺大事不喵";
             }
-            else if (point > 0 && point <= 120){level = 1; breed_Label.Text = "普通貓貓";}//120
+            else if (point >= 0 && point <= 120){level = 1; breed_Label.Text = "普通貓貓";}//120
             else if (point <= 240) { level = 2; breed_Label.Text = "眼鏡貓貓"; }//240
             else if (point <= 420) { level = 3; breed_Label.Text = "學士帽貓貓"; }//420
             else if (point <= 660) { level = 4; breed_Label.Text = "POP貓貓"; }//660
